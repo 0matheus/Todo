@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 30px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   /*background-color: #4343A3;*/
   background-color: #036564;
@@ -8,6 +8,11 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+#titulo {
+  color: #E8DDCB;
+  /*size: 20px;*/
 }
 
 #content {
