@@ -1,7 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #4343A3;
+  /*background-color: #4343A3;*/
+  background-color: #036564;
+  color: white;
 }
 
 a {
@@ -20,12 +22,14 @@ a {
 }
 
 #messages {
-  width: 690px;
+  width: 800px;
   height: 300px;
-  overflow: auto;
-  background-color: #bbb;
+  /*overflow: auto;*/
+  color: #033649;
+  background-color: #E8DDCB;
   margin-bottom: 1em;
   margin-right: 10px;
+  padding: 10px;
 }
 
 #room-list {
@@ -43,11 +47,11 @@ a {
   background-color: #ddd;
 }
 
-#send-message {
+/*#send-message {
   width: 700px;
   margin-bottom: 1em;
   margin-right: 1em;
-}
+}*/
 
 #help {
   font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;

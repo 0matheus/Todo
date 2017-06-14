@@ -117,7 +117,7 @@ $(document).ready(function() {
 
 
   $('#messages').change(function(){
-    alert('messages changed');
+    // alert('messages changed');
     var $boxes = $('#messages input[name="chk"]:checked');
     $boxes.each(function(){
         $(this).parent().remove();

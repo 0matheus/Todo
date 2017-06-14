@@ -3,6 +3,7 @@
 
 <head>
   <title>Chat</title>
+  <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
   <link rel='stylesheet' href='/stylesheets/style.css'></link>
 </head>
 
@@ -13,17 +14,33 @@
   <div id='messages'><ul></ul></div>
 
   <form id='send-form'>
-  
-    <label>Todo</label>
-    <input id='send-message'/> <br>
+    <div class="form-group">
+      <label for="send-message">Todo</label>
+      <input id="send-message" type="text" class="form-control" placeholder="Todo">
+    </div>
+    <div class="form-group">
+      <label for="autor">Autor</label>
+      <input id="autor" type="text" class="form-control" placeholder="Autor">
+    </div>
+    <div class="form-group">
+      <label for="prioridade">Prioridade</label>
+      <input id="prioridade" type="text" class="form-control" placeholder="Prioridade">
+    </div>
+    <div class="form-group">
+      <label for="data">Data</label>
+      <input id="data" type="text" class="form-control"  placeholder="Data">
+    </div>
+    
+    <!--  <label>Todo</label>
+    <input id='send-message'/> <br> 
     <label>Autor</label>
     <input id='autor'/> <br>
     <label>Prioridade</label>
     <input id='prioridade'/> <br>
     <label>Data</label>
-    <input id='data'/> <br>
+    <input id='data'/> <br> -->
 
-    <input id='send-button' type='submit' value='Send'/>
+    <input class="btn btn-default" id='send-button' type='submit' value='Adicionar'/>
 
     <!-- <div id='help'>
       Chat commands:
@@ -36,7 +53,8 @@
 </div>
 
 <script src='/socket.io/socket.io.js' type='text/javascript'></script>
-<script src='http://code.jquery.com/jquery-1.8.0.min.js' type='text/javascript'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type='text/javascript'></script>
+<script src="/javascripts/bootstrap.min.js"></script>
 <script src='/javascripts/chat.js' type='text/javascript'></script>
 <script src='/javascripts/chat_ui.js' type='text/javascript'></script>
 </body>
