@@ -4,7 +4,7 @@ function divEscapedContentElement(message) {
 }
 
 function liEscapedContentElement(message) {
-  return $('<div></div>').html('<input type=\'checkbox\'></input>'+'<label>'+message+'</label>');
+  return $('<div></div>').html('<input type=\'checkbox\' name=\'chk\'></input>'+'<label>'+message+'</label>');
 }
 //Retorna uma mensagem contida em uma div específica
 function divSystemContentElement(message) {
@@ -114,6 +114,15 @@ $(document).ready(function() {
 
   //Cria efeito de focus na caixa de mensagens
   $('#send-message').focus();
+
+
+  $('#messages').change(function(){
+    alert('messages changed');
+    var $boxes = $('#messages input[name="chk"]:checked');
+    $boxes.each(function(){
+        $(this).parent().remove();
+      });
+  });
 
   //Submete a entrada de usuário ao tratador de input
   $('#send-form').submit(function() {
