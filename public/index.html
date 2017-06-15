@@ -2,6 +2,7 @@
 <html lang='en'>
 
 <head>
+  <meta charset="utf-8">
   <title>Chat</title>
   <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
   <link rel='stylesheet' href='/stylesheets/style.css'></link>
@@ -13,9 +14,9 @@
   <div id="titulo" class="page-header">
     <h1>Todo List <small style="color: #CDB380">By Matheus & Heraldo</small></h1>
   </div>
-  <div id='room'></div>
-  <div id='room-list'></div>
-  <div id='messages'><ul></ul></div>
+  <!-- <div id='room'></div> -->
+  <!-- <div id='room-list'></div> -->
+  <div id='messages' class="pre-scrollable"><ul></ul></div>
 
   <form id='send-form'>
     <div class="form-group">
@@ -28,11 +29,16 @@
     </div>
     <div class="form-group">
       <label for="prioridade">Prioridade</label>
-      <input id="prioridade" type="text" class="form-control" placeholder="Prioridade">
+      <select id="prioridade" class="form-control">
+        <option>Baixa</option>
+        <option>Média</option>
+        <option>Alta</option>
+      </select>
+      <!-- <input id="prioridade" type="text" class="form-control" placeholder="Prioridade"> -->
     </div>
     <div class="form-group">
       <label for="data">Data</label>
-      <input id="data" type="text" class="form-control"  placeholder="Data">
+      <input id="data" type="datetime" class="form-control" placeholder="30/10/2017">
     </div>
     
     <!--  <label>Todo</label>

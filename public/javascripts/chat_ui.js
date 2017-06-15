@@ -3,8 +3,13 @@ function divEscapedContentElement(message) {
   return $('<div></div>').text(message);
 }
 
-function liEscapedContentElement(message) {
-  return $('<div></div>').html('<input type=\'checkbox\' name=\'chk\'></input>'+'<label>'+message+'</label>');
+function liEscapedContentElement(message, autor, prioridade, data) {
+  return $('<div></div>').html(
+    '<input type=\'checkbox\' name=\'chk\'></input>'
+      +'<label>&nbsp'+message+'</label><br/>'
+      +'<label><strong>Autor: </strong>'+autor+'</label><br/>'
+      +'<label><strong>Prioridade: </strong>'+prioridade+'</label><br/>'
+      +'<label><strong>Data: </strong>'+data+'</label><br/><br/>');
 }
 //Retorna uma mensagem contida em uma div específica
 function divSystemContentElement(message) {
@@ -20,17 +25,17 @@ function processUserInput(chatApp, socket) {
   var systemMessage;
 
   // O input corresponde a um comando
-  if (message.charAt(0) == '/') {
-    systemMessage = chatApp.processCommand(message);
-    if (systemMessage) {
-      $('#messages').append(divSystemContentElement(systemMessage));
-    }
-  } else { //O input corresponde a uma mensagem
+  // if (message.charAt(0) == '/') {
+  //   systemMessage = chatApp.processCommand(message);
+  //   if (systemMessage) {
+  //     $('#messages').append(divSystemContentElement(systemMessage));
+  //   }
+  // } else { //O input corresponde a uma mensagem
     chatApp.sendMessage($('#room').text, message, autor, prioridade, data, false);
     // $('#messages').append($('<input type=\'checkbox\'></input>'));
-    $('#messages').append(liEscapedContentElement(message+autor+prioridade+data));
+    $('#messages').append(liEscapedContentElement(message, autor, prioridade, data));
     $('#messages').scrollTop($('#messages').prop('scrollHeight'));
-  }
+  // }
 
   $('#send-message').val('');
   $('#autor').val('');
