@@ -67,7 +67,7 @@ $(document).ready(function() {
   socket.on('mensagens', function(mensagens){
     for(var mensagem in mensagens){
       // $('#messages').append($('<input type=\'checkbox\'></input>'));
-      $('#messages').append(liEscapedContentElement(mensagens[mensagem].text+mensagens[mensagem].autor));
+      $('#messages').append(liEscapedContentElement(mensagens[mensagem].text,mensagens[mensagem].autor,mensagens[mensagem].prioridade,mensagens[mensagem].data));
     }
   });
 
@@ -89,7 +89,7 @@ $(document).ready(function() {
     //     + message.text + message.autor + message.data  + message.prioridade + 
     //   '</div>');
     // var newElement = $('<li></li>').text(message.text + message.autor + message.data + message.prioridade);
-    $('#messages').append(liEscapedContentElement(message.text+message.autor+message.prioridade+message.data));
+    $('#messages').append(liEscapedContentElement(message.text,message.autor,message.prioridade,message.data));
   });
 
   //Lida com as salas disponíveis
